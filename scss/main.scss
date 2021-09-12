@@ -1,0 +1,114 @@
+@import "./resets";
+@import "./variable";
+@import "./config";
+@import "./home";
+@import "./menu";
+
+// @function weight($weight-name) {
+//   @return map-get($font-weights, $weight-name);
+// }
+
+// @mixin flexCenter($direction) {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: $direction;
+// }
+
+// @mixin theme($light-theme: true) {
+//   @if $light-theme {
+//     background-color: darken($primary-color, 100%);
+//     color: lighten($text-color, 100%);
+//   }
+// }
+
+// @mixin mobile {
+//   @media (max-width: $mobile) {
+//     @content;
+//   }
+// }
+
+// body {
+//   background-color: $primary-color;
+// }
+
+// h1 {
+//   color: #fff;
+//   text-align: center;
+//   padding: 0 0 5rem 0;
+// }
+
+// .main {
+//   width: 80%;
+//   margin: 0 auto;
+//   @include flexCenter(row);
+//   #{&}_paragraph {
+//     font-weight: weight(regular);
+//     text-align: center;
+//     &:hover {
+//       color: pink;
+//     }
+//   }
+//   @include mobile {
+//     flex-direction: column;
+//   }
+// }
+
+// .light {
+//   @include theme($light-theme: true);
+// }
+
+body {
+  background-color: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: set-text-color($primary-color);
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+
+  .social-icons {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+
+    a {
+      padding: 0.4rem;
+      @include transition-ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: set-text-color($primary-color);
+}
